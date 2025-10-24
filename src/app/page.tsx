@@ -2,7 +2,6 @@
 "use client"
 import { useRouter } from "next/navigation"
 import { useState } from "react";
-import CardContainer from "./components/CardContainer";
 
 const svgLogo = [
   "public/logo/java.svg",
@@ -24,26 +23,7 @@ export default function HomePage() {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <CardContainer>
-        {/* 헤더 한 줄: 좌측 버튼 + 우측 네비 */}
-  <header className="flex items-center justify-between px-6 pb-4 pt-0">
-    {/* 왼쪽 동그란 버튼 */}
-    <div
-      aria-label="Go to main"
-      className="inline-flex h-7 w-7 items-center justify-center rounded-full border-2 border-gray-400"
-    />
-
-    {/* 오른쪽 네비 */}
-    <nav aria-label="Primary">
-      <ul className="flex items-center gap-10">
-        <li><a href="/portfolio"   className="text-gray-700 hover:underline font-medium">Portfolio</a></li>
-        <li><a href="/blog"        className="text-gray-700 hover:underline font-medium">Blog</a></li>
-        <li><a href="/mini-game"   className="text-gray-700 hover:underline font-medium">MiniGame</a></li>
-        <li><a href="/playground"  className="text-gray-700 hover:underline font-medium">PlayGround</a></li>
-      </ul>
-    </nav>
-  </header>
-
+    <>
         {/* 메인 컨텐츠 */}
         <div className="flex gap-12 items-center">
           {/* Left: 인삿말 & 설명 */}
@@ -85,7 +65,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-    </CardContainer>
+    </>
   );
 }
 
